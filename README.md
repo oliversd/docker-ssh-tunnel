@@ -1,21 +1,20 @@
 # Docker SSH Tunnel
 
-Create a lightweight Alpine Linux based SSH tunnel to a host.  Uses pure SSH, no fluff.
+Create a lightweight Alpine Linux based SSH tunnel to a host. Uses pure SSH, no fluff.
 
 ## Versions
 
 [![dockeri.co](http://dockeri.co/image/jujhars13/docker-ssh-tunnel)](https://hub.docker.com/r/jujhars13/docker-ssh-tunnel/)
 
-- [`v1.8`, `latest` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.8/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.7`, `v1.7.2` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.7/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.6` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.6/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.5` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.5/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.4` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.4/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.3`, `v1.3.1` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.3.1/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.2` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.2/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.1` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.1/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.0` (*Dockerfile*)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.0/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-
+- [`v1.8`, `latest` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.8/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.7`, `v1.7.2` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.7/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.6` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.6/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.5` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.5/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.4` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.4/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.3`, `v1.3.1` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.3.1/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.2` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.2/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.1` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.1/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
+- [`v1.0` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.0/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
 
 For single TCP port applications (database/webserver/debugging access) a SSH tunnel is far faster and simpler than using a VPN like OpenVPN; see this excellent [blog post](https://blog.backslasher.net/ssh-openvpn-tunneling.html) for more info.
 
@@ -42,6 +41,9 @@ SSH_BASTION_HOST="bastion.host"
 SSH_PORT=2297
 
 SSH_USER="tunnel_user"
+
+SSH_PASS="tunnel_pass"
+
 ```
 
 Also be sure to inject/mount your private ssh key into the container to `/ssh_key/id_rsa`
@@ -51,28 +53,27 @@ Also be sure to inject/mount your private ssh key into the container to `/ssh_ke
 ```bash
 # connect to our mongo server in AWS via a bastion host
 # now we can use a connection string like this:
-# mongodb://localhost:27017 
+# mongodb://localhost:27017
 # to talk to our AWS mongo install
 
 docker run -it --rm \
--p 27017:27017 \
--e LOCAL_PORT=27017 \
--e REMOTE_PORT=27017 \
--e SSH_BASTION_HOST=34.135.248.162 \
--e REMOTE_SERVER_IP=aws-nlb-mongo-fake.internal-us-east-1.es.amazonaws.com \
+-p 5432:5432 \
+-e LOCAL_PORT=5432 \
+-e REMOTE_PORT=5432 \
+-e SSH_BASTION_HOST=IP_BASTION \
+-e REMOTE_SERVER_IP=DNS_RDS_AWS \
 -e SSH_USER=ec2-user \
--v ~/.ssh/id_rsa:/ssh_key/id_rsa:ro \
+-e SSH_PASS=YOUR_PASSWORD \
 jujhars13/docker-ssh-tunnel
 
-# connection established, now we can mongo away locally
-mongo --host localhost --port 27017
+# connection established, now we can postgresql on localhost
+
 ```
 
 ## TODO
 
-- [x] add example `docker-compose.yml`  to `/examples`
-- [ ] add example k8s manifest to `/examples`
+- [x] add example `docker-compose.yml` to `/examples`
 
 ## Version
 
-- 2021-09-12 - `v1.8` - Bumps Alpine to `v3.15`
+- 2022-07-07 - `v1.9`

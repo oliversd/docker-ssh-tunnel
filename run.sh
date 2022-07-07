@@ -24,12 +24,12 @@ fi
 
 echo "starting SSH proxy $LOCAL_PORT:$REMOTE_SERVER_IP:$REMOTE_PORT on $SSH_USER@$SSH_BASTION_HOST:$SSH_PORT"
 
-/usr/bin/ssh \
+/usr/bin/sshpass -p $SSH_PASS /usr/bin/ssh \
 -NTC -o ServerAliveInterval=60 \
 -o GatewayPorts=true \
 -o ExitOnForwardFailure=yes \
 -o StrictHostKeyChecking=no \
 -L $LOCAL_PORT:$REMOTE_SERVER_IP:$REMOTE_PORT \
 $SSH_USER@$SSH_BASTION_HOST \
--p $SSH_PORT \
--i /ssh_key/id_rsa
+-p $SSH_PORT
+

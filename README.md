@@ -2,21 +2,26 @@
 
 Create a lightweight Alpine Linux based SSH tunnel to a host. Uses pure SSH, no fluff.
 
-## Versions
+## Steps
 
-[![dockeri.co](http://dockeri.co/image/jujhars13/docker-ssh-tunnel)](https://hub.docker.com/r/jujhars13/docker-ssh-tunnel/)
+1. Run
+   ```
+   docker build -t symlab/ssh-tunnel .
+   ```
+2. Run
+   ```
+   docker run -d \
+   -p 5432:5432 \
+   -e LOCAL_PORT=5432 \
+   -e REMOTE_PORT=5432 \
+   -e SSH_BASTION_HOST=IP_BASTION \
+   -e REMOTE_SERVER_IP=DNS_RDS_AWS \
+   -e SSH_USER=YOUR_USER \
+   -e SSH_PASS=YOUR_PASSWORD \
+   symlab/ssh-tunnel
+   ```
 
-- [`v1.8`, `latest` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.8/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.7`, `v1.7.2` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.7/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.6` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.6/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.5` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.5/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.4` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.4/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.3`, `v1.3.1` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.3.1/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.2` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.2/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.1` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.1/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-- [`v1.0` (_Dockerfile_)](https://github.com/jujhars13/docker-ssh-tunnel/blob/v1.0/Dockerfile) [![](https://images.microbadger.com/badges/image/jujhars13/docker-ssh-tunnel.svg)](http://microbadger.com/images/jujhars13/docker-ssh-tunnel "Get your own image badge on microbadger.com")
-
-For single TCP port applications (database/webserver/debugging access) a SSH tunnel is far faster and simpler than using a VPN like OpenVPN; see this excellent [blog post](https://blog.backslasher.net/ssh-openvpn-tunneling.html) for more info.
+## Usage
 
 For example I use it to create a SSH tunnel from a GCP Kubernetes cluster into an on prem bastion host in order to talk to an on prem MySQL database; it SSHs onto the internal LAN and connects me to the internal on prem MySQL server.
 
@@ -64,7 +69,7 @@ docker run -it --rm \
 -e REMOTE_SERVER_IP=DNS_RDS_AWS \
 -e SSH_USER=ec2-user \
 -e SSH_PASS=YOUR_PASSWORD \
-jujhars13/docker-ssh-tunnel
+symlab/ssh-tunnel
 
 # connection established, now we can postgresql on localhost
 
